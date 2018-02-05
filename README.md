@@ -1,6 +1,6 @@
 # USML
 
-USML it is Ural School of Machine Learing!
+USML it is Ural School of Machine Learning!
 
 In this repo, i will publish my code of homework for USML.
 
