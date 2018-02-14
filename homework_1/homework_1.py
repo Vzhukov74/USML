@@ -130,7 +130,12 @@ print(result6[tagForWomen])
 Можно заметить, что данные не особо-то чистые, много в них всякой "грязи" и неточностей.
 Еще лучше мы это увидим, когда обсудим визуализацию данных.
 '''
-
+filtered_df = df[(df['ap_lo'] <= df['ap_hi']) &
+                 (df['height'] >= df['height'].quantile(0.025))
+                 (df['height'] <= df['height'].quantile(0.975))
+                 (df['weight'] >= df['weight'].quantile(0.025))
+                 (df['weight'] <= df['weight'].quantile(0.975))]
+print(filtered_df.shape[0] / df.shape[0])"
 #r = pd.Series(df['height'])
 #r.quantile(.025, .975)
 #print(r)
